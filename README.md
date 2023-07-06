@@ -28,4 +28,6 @@ Advantage of Internal CSS over the Inline CSS is that
 
 Disadvantage of using Internal CSS is that it increases the size of the header. And for each new page reloaded on the browser, browser needs to fetch the header each time, which increases the browsing time.
 
-3. External CSS - In this style, CSS rules moved to the different file. That file is only loaded onetime so increses the efficiency.
+3. External CSS - In this style, CSS rules moved to the file. That file is only loaded onetime so increses the efficiency.
+File is linked to the html page using link tag with rel attribute with stylesheet value and href attribute with file address value.
+Ex- <link rel="stylesheet" href= "file-address">
