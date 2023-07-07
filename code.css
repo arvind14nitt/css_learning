@@ -37,10 +37,21 @@ body {
   margin: 10px 0;
 }
 
-div{
-  background-color: Red; font-style:oblique; font-family: Georgia, 'Times New Roman', Times, serif;
+.class-style{
+  font-style:oblique; font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
+#id1{
+  background-color: yellow;  background-position: center;
+}
+#id2{
+  background-color: greenyellow; text-align: center; font-size: large;
+}
+#id3{
+  background-color: blueviolet;
+}
+#id4{
+  background-color: Red; 
+}
 h1{
   font-family: 'Oswald', sans-serif;
 }
