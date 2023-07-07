@@ -133,3 +133,14 @@ p should be direct child of div
 These uses white space
 Ex- div p
 Its not necesssary to be direct child of parent. But p should be child of div direct or indirect.
+
+# Useful Links -
+Complete MDN CSS Reference (don't learn this by heart!): https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+
+Do you prefer reading? Find written CSS docs on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS
+
+Common CSS Properties Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference
+
+CSS Combinators: https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors
+
+More details on CSS Specifity: https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
