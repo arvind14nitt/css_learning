@@ -1,7 +1,8 @@
-# css_learning
+# CSS_Learning
 This is to learn css
 
 CSS - Cascading style sheet - A way to make HTML doc look good. 
+
 
 # History of CSS development
 CSSv1 - 1996
@@ -10,7 +11,7 @@ CSSv3 - in development. Its split up into independent modules.
 
 # CSS are of three types - 
 
-## 1. inline CSS. 
+## 1. Inline CSS. 
 In which style attribute is added to each HTML tag and its style changed using properties:value for each property.
 
 For ex - <H1 style="prop1:value; prop2:value; prop3:value and so on"> </H1>
@@ -144,3 +145,186 @@ Common CSS Properties Reference: https://developer.mozilla.org/en-US/docs/Web/CS
 CSS Combinators: https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors
 
 More details on CSS Specifity: https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+
+
+# CSS Box Model
+Every HTML element is considered as the block Like the following image
+![Alternate image text](/Users/apple/css_learning/css box model.png)
+
+There are 3 things with which a element is made of. And Marging is the area which surrounds the element.
+Text area
+Padding
+Border 
+Margin
+
+Margin is the distance between the element and its sibling. Its not part of element.
+
+There are two types of HTML elements -
+1. Block level - which cover the complete width of the Page.These are rendered as box. Ex- h1 tag etc.
+2. in Line - These elements cover only the width needed by the content. These are rendered as line Ex- Anchor tags
+The behvaiour can be changed using dis[play property.
+we can't set margin top and bottom. We can change the behaviour using display property.
+
+display:inline/block/none/inline-block;
+The display  Property: https://developer.mozilla.org/en-US/docs/Web/CSS/display
+
+Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements.
+
+We had a look at display: none;  - this value removes the element to which you apply it from the document flow. This means that the element is not visible and it also doesn't "block its position". Other elements can (and will) take its place instead.
+
+There is an alternative to that though.
+
+If you only want to hide an element but you want to keep its place (i.e. other elements don't fill the empty spot), you can use visibility: hidden; 
+
+Here's a visual example:
+
+.box-1 {
+    display: none;
+}
+ 
+.box-2 {
+    display: inline-block;
+}
+Will render:
+
+x  
+
+where x  has the class box-2 . The first element just isn't displayed. It's still part of the DOM though, you can still access it via JavaScript for example.
+
+Here's an example for visibility: hidden :
+
+.box-1 {
+    visibility: hidden;
+}
+ 
+.box-2 {
+    display: inline-block;
+}
+Will render:
+
+_x 
+
+where _  simply is an empty spot and x  has the class box-2 .
+
+The element is only invisible, it's not removed from the document flow and of course also not from the DOM.
+
+CSS Box Model: https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model
+
+## Margin Collapsing
+Bigger Marging wins.
+
+Two elements each have the marging around it. If they are adjacents whichever element has the bigger margin wins the game.
+
+But if this is annoying, they margin-top and margin-bottom can be used to get rid of these.
+
+Dig deep here - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+
+There, three base cases are described:
+
+Adjacent siblings which both have margins
+A parent which holds one or more child elements where the first and/ or last (or the only) child has margins
+An element without content, padding, border and height
+Let's explore these cases:
+
+1. Adjacent Siblings
+
+In this case, the first element might have a margin of 10px  (on all sides let's say) and the second one has 5px  (or 20px  - the values don't matter).
+
+CSS will collapse the margins and only add the bigger one between the elements. So if we got margins of 10px  and 5px , a 10px  margin would be added between the elements?
+
+2. A parent with children that have a margin
+
+To be precise, the first and/ or last or the only child has to have margins (top and/ or bottom). In that case, the parent elements margin will collapse with the child element(s)' margins. Again, the bigger margin wins and will be applied to the parent element.
+
+If the parent element has padding, inline content (other than the child elements) or a border, this behavior should not occur, the child margin will instead be added to the content of the wrapping parent element.
+
+3. An empty element with margins
+
+This case probably doesn't occur that often but if you got an element with no content, no padding, no border and no height, then the top and bottom margin will be merged into one single margin. Again, the bigger one wins.
+
+## SHort Hand Properties
+These properties combines multiple properties in a single property.
+Ex- 
+1. 
+border-width:20 px;
+border-style: solid/ dasshed;
+border-color: red;
+ SHort-hand - border: 20px solid red; <--here order doesn't matter.-->
+
+ 2. 
+ marging-top: 20px;
+ margin-right:20px
+ margin_bottom: 20px
+ marging-left:20px
+ Shorthand-  margin -20px
+
+ ## Length and width
+ Block level element take full 100% width by default.  So if we want to change the width, we can edit the width to some small % value.
+ Length of element can also be given in percentage of the parent element. Sometimes, we don't see the change in the height of the element even when we edit the height of element to 100%. This happens because this percentage value is relative to the height of its parent. So in the tree, we need to go up till we set the desired height.
+ More on height & width: https://www.w3schools.com/css/css_dimension.asp
+
+ ### box-sizing
+ content-box - height and width of the content is considered.
+ border-box - height and width includes the border and the width.
+
+ Box sizing, which doesn't include the margin. and browser automaticlly put the marging to the element. If we want to get rid of browser added things, we need to use the universal selector.
+ *{
+    box-sizing: border-box;
+ }
+
+ Note- inline-block level element occupy only the width needed by its elements. So we find difficulty in aligning the text sometimes, because they dont take the full block width. so we manually change the width to see the effect of alignment.
+
+ box-sizing : https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+
+ 
+
+## Pseudo classes and pseudo elements-
+Pseudo classes defines the style of **specific state** of an element.
+Defined with :class-name Ex- hower or active
+.main-nav__item a:hover{
+    color:white;
+}
+.main-nav__item a:hover{
+    color:white;
+}
+
+WHen mouse cursor moves over the achor element of class main-nav__item, its(anchor block) color changes to white
+
+Link to different pseudo classes-
+MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+
+Pseudo elements defines the style of **specific part** of element.
+Defined with ::element-name
+Ex- p::first-letter{
+    color:red;
+}
+This will make first letter of paragraph red.
+
+Link to different pseufo elements-
+Elements: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+
+## Grouping
+.main-nav__item a:hover{
+    color:white;
+}
+.main-nav__item a:active{
+    color:white;
+}
+
+can be grouped as
+
+.main-nav__item a:hover,
+.main-nav__item a:hover{
+    color:white;
+}
+
+Similarly classes can also be grouped
+
+## rounding corners
+
+border-radius can be used to round the corner. for elliptic, two % values can be given. for circle, one single value is enough.
+
+## url function to add the background image
+url(path-to-image);
+
+path-to-image can be hyper reference(i.e http address) or the local file.
