@@ -1,57 +1,94 @@
-body {
-  font-family: "Montserrat", sans-serif;
+
+
+#product-overview{
+  background:url("new-york.jpg");
+  color:white;
+  font-family: 'Lato', sans-serif;
+  height:528px;
+  width:100%;
+  padding:10px;
+  
 }
 
-.destination {
-  box-sizing: border-box;
-  width: 320px;
-  height: 420px;
-  margin: 20px auto;
-  border: 1px solid #aaa;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  transition: background-color 400ms ease-out;
+#plans{
+  
+}
+.section-title{
+   color:rgb(80, 240, 80);
+}
+body{
+  margin:0px;
 }
 
-.destination:hover,
-.destination:active {
-  background-color: #fa923f;
-  color: white;
+.main-header{
+  background:rgb(11, 187, 11);
+  /*padding:8px 16px;
+  width:100%;*/
+  
 }
 
-.thumbnail {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
+.main-header > div{
+  display:inline-block;
 }
 
-.thumbnail img {
-  width: 100%;
+.main-header__brand{
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-weight:bold;
+  vertical-align: middle;
+  color:darkolivegreen;
+  font-size:22px;
 }
 
-.content {
-  text-align: center;
+.main-nav{
+  text-align:right;
+  display:inline-block;
+  width:calc(100% - 236px);
+  vertical-align: middle;
 }
 
-.content h1 {
-  margin: 10px 0;
+.main-nav__items{
+  display:inline-block;
+  padding:0;
+  margin:0;
+  list-style:none;
+  vertical-align: middle;
+  text-decoration: none;
 }
 
-.class-style{
-  font-style:oblique; font-family: Georgia, 'Times New Roman', Times, serif;
+
+.main-nav__item{
+  display:inline-block;
+  text-align: right;
+  vertical-align: middle;
+  margin:0 16px;
+  font-weight:bold;
+  padding: 10px 0px;
+  
 }
-#id1{
-  background-color: yellow;  background-position: center;
+.main-nav__item a:hover,
+.main-nav__item a:active{
+  color:white;
+  border-bottom: solid 2px white;
 }
-#id2{
-  background-color: greenyellow; text-align: center; font-size: large;
+
+.main-nav__items--link{
+  color:darkolivegreen;
+  text-decoration: none;
 }
-#id3{
-  background-color: blueviolet;
+
+.main-nav__items--cta a{/*BEM naming specificatioon*/
+  color:white;
+  padding:8px 16px;
+  border-radius: 45% ;
+  background-color: red;
 }
-#id4{
-  background-color: Red; 
+
+.main-nav__items--cta a:hover,
+.main-nav__items--cta a:active{
+   color:red;
+   background: white;
+   border:none;
 }
-h1{
-  font-family: 'Oswald', sans-serif;
-}
+
+

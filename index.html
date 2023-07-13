@@ -7,25 +7,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Learning CSS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./code.css">
 </head>
 
 <body>
-    <div id="id1">
-        This is the main div
-        <div id="id2" class="class-style">
-            first div
-        </div>
-        <div id="id3" class="class-style">
-            second div
-        </div>
-        <div id="id4" class="class-style">
-            third div
-        </div>    
-        This is the main end div
-    </div>
+    <header class="main-header">
+        <div >
+            <a href="index.html" class="main-header__brand">
+                ArvindHostingProvider
+            </a></div><nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="packages/index.html" class="main-nav__items__link">Packages</a>
+                </li>
+                <li class="main-nav__item" >
+                    <a href="customers/index.html" class="main-nav__items__link">Customers</a>
+                </li>
+                <li class="main-nav__item main-nav__items--cta" >
+                    <a href="start-hosting/index.html" class="main-nav__items--link ">Start Hosting</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="product-overview">
+            <h1>Get the freedom you deserve.</h1>
+        </section>
+        <section id="plans">
+            <h1 class="section-title">Choose Your Plan</h1>
+             <p>Make sure you get the most for your money!</p>
+        </section>
+    </main>
 </body>
 
 </html>
