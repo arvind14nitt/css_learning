@@ -328,3 +328,53 @@ border-radius can be used to round the corner. for elliptic, two % values can be
 url(path-to-image);
 
 path-to-image can be hyper reference(i.e http address) or the local file.
+
+# More on CSS Classes - 
+We can use more than one class wih one element.
+Ex - <div class="class1 class2">  -- This uses more than one class.
+Both classes can have independent rules.
+.class1{
+    property:value;
+}
+.class2{
+    property:value;
+}
+
+Both classes have same specificity, order will not important here.
+
+<a href="#" class="active">
+
+a.active{  //here there is no white space between tag a and active class
+    property:value;
+}
+a.active is written as one word. Targetting an element which is anchor tag and have the active class. 
+This can be appleied to more than one element i.e anchor tags
+
+If we have a space between anchor tag and active call like a .active{}, then it will targetdirect or indirect descendant of anchor tag.(This will act as combinator). In similar line, we can define the id selector like a#active{}.
+
+class selectors can be chained. like .priority.highlighted
+
+## Id can be used for adding link to different sections of page.
+so id are not just for styling purposes.
+## !important notation
+div{
+    color:red !important  // This overwrites specifity and other selectors
+}
+
+In general: DOn't use the !important. Use specificty and rules to style your website a/q to your needs(and to write better CSS code in the end)
+
+## :not pseudo class
+This will allow to revert the property applied to a tag.
+Ex- a:not(.active){
+
+}
+This will select any anchor tag which will not have active class.
+
+But such selectors are performance sensitive. So always try to be simple which will enhance the performance.
+
+## Browser support
+
+A discussion on "classes vs IDs": https://stackoverflow.com/questions/12889362/difference-between-id-and-class-in-css-and-when-to-use-it
+When is using !important  okay? => https://css-tricks.com/when-using-important-is-the-right-choice/
+The :not()  pseudo class: https://developer.mozilla.org/en-US/docs/Web/CSS/:not
+Can I Use: https://caniuse.com/
