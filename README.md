@@ -329,7 +329,9 @@ url(path-to-image);
 
 path-to-image can be hyper reference(i.e http address) or the local file.
 
-# More on CSS Classes - 
+
+# More on CSS Classes -
+
 We can use more than one class wih one element.
 Ex - <div class="class1 class2">  -- This uses more than one class.
 Both classes can have independent rules.
@@ -347,7 +349,9 @@ Both classes have same specificity, order will not important here.
 a.active{  //here there is no white space between tag a and active class
     property:value;
 }
+
 a.active is written as one word. Targetting an element which is anchor tag and have the active class. 
+
 This can be appleied to more than one element i.e anchor tags
 
 If we have a space between anchor tag and active call like a .active{}, then it will targetdirect or indirect descendant of anchor tag.(This will act as combinator). In similar line, we can define the id selector like a#active{}.
@@ -377,4 +381,7 @@ But such selectors are performance sensitive. So always try to be simple which w
 A discussion on "classes vs IDs": https://stackoverflow.com/questions/12889362/difference-between-id-and-class-in-css-and-when-to-use-it
 When is using !important  okay? => https://css-tricks.com/when-using-important-is-the-right-choice/
 The :not()  pseudo class: https://developer.mozilla.org/en-US/docs/Web/CSS/:not
+
 Can I Use: https://caniuse.com/
+
+
