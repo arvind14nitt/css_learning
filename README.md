@@ -415,7 +415,7 @@ Other values of position can be
 1. Fixed 2. Absolute 3. Relative 4. sticky
 
 If position != static, then element can be taken out of document flow.
-Position of an element can be changed into 4 directions-
+Position of an element can be changed into 4 directions properties-
 1. top 2. right 3. left 4. bottom
 
 
@@ -424,25 +424,47 @@ With this, element is taken out of the HTML document flow. Element start behavin
 
 There is another direction called z-index  which helps in moving the element in z direction i.e perpendicular to the screen. The + value will bring the element to the top and negative values will take the element down. The auto value or zero value will not change the position of element.
 
+z-index always applicable with html elements which have position property equal to fixed. If two html elements have position:fixed, then the relative value of z-index will work. This means that the one which has lower value will be below than the one which has higher value.
+
+
+Following are directions in which element moves.
 top = 10px;
 left = 20px;
 right=20px;
 bottom=20px;
-Here position context is view port
+Here position context is view port.
+These can be mixed like left top and etc.
 
 ## position = absolute
 Position of elemnet to which this property applies depends upon two rules
-1. if none of the ancestors of parent elements have poistion property applied, then the position context of the element is the html 
+1. if none of the ancestors of parent elements have position property applied, then the position context of the element is the html 
 element.
 
 2. if some of ancestors have the position property applied, then closest ancestor which has position property applied is the position context of the element.
 ## position = relative
+relative property doesn't bring element out of document flow.
+with top, left, right, bottom directional properties we can move the element wrt elements current position. Here positional context is current position of element.
 
+The relative property can be used in combination with absolute property with rule-2. This is used to add badges For ex on the page.
+
+## overflow:hidden
+if you want that your child element goes out of the parent, you can hide the overflows.
+
+If overflow property applied to body element, it is gone to the html element. So remember in such case, we need to add this overflow to html and body both.
 
 ## position = sticky
+sticky property provides the effect of fixed and relative.
 
 
 ## stacking concept
+This means how the elements stack over each other when they are taken out of document flow.
 
+If parent of an element is having less z-index than the another elements parent. the less-z-index parents child even when having higher z-index will remain lower.
+
+Positioning theory: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning
+More about the "position" property: https://developer.mozilla.org/en-US/docs/Web/CSS/position
+The z-index: https://developer.mozilla.org/en-US/docs/Web/CSS/z-index
+The Stacking Context: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+The "sticky" value and current browser support: https://caniuse.com/#search=sticky
 
 

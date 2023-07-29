@@ -1,7 +1,9 @@
 .main-header{
     background:rgb(11, 187, 11);
-    /*padding:8px 16px;
-    width:100%;*/
+    /*padding:8px 16px;*/
+    width:100%;
+    position:fixed;
+    z-index:1;
     
   }
   
