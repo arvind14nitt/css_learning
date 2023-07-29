@@ -1,0 +1,104 @@
+.main-header{
+    background:rgb(11, 187, 11);
+    /*padding:8px 16px;
+    width:100%;*/
+    
+  }
+  
+  .main-header > div{
+    display:inline-block;
+  }
+  
+  .main-header__brand{
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight:bold;
+    vertical-align: middle;
+    color:darkolivegreen;
+    font-size:22px;
+    padding-left:10px;
+    
+  }
+  
+  .main-nav{
+    text-align:right;
+    display:inline-block;
+    width:calc(100% - 246px);
+    vertical-align: middle;
+  }
+  
+  .main-nav__items{
+    display:inline-block;
+    padding:0;
+    margin:0;
+    list-style:none;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+  
+  
+  .main-nav__item{
+    display:inline-block;
+    text-align: right;
+    vertical-align: middle;
+    margin:0 16px;
+    font-weight:bold;
+    padding: 10px 0px;
+    
+  }
+  
+  .main-nav__item a:hover,
+  .main-nav__item a:active{
+    color:white;
+    border-bottom: solid 2px white;
+  }
+  
+  .main-nav__items--link{
+    color:darkolivegreen;
+    text-decoration: none;
+  }
+  
+  .main-nav__items--cta a{/*BEM naming specificatioon*/
+    color:white;
+    padding:8px 16px;
+    border-radius: 45% ;
+    background-color: red;
+  }
+  
+  .main-nav__items--cta a:hover,
+  .main-nav__items--cta a:active{
+     color:red;
+     background: white;
+     border:none;
+  }
+  
+  .main-footer{
+    color:white;
+    background: black;
+    
+    text-align:center;
+    width:100%;
+  }
+  
+  .main-footer-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+  }
+  .main-footer-list-item{
+    display:inline-block;
+  }
+  
+  .main-footer-list-item a{
+    color:white;
+    margin:28px;
+    padding:16px;
+    text-decoration: none;
+  }
+  
+  .main-footer-list-item a:hover,
+  .main-footer-list-item a:active {
+    color:#ccc;
+  }
+  
+  

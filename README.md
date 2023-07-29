@@ -379,3 +379,70 @@ When is using !important  okay? => https://css-tricks.com/when-using-important-i
 The :not()  pseudo class: https://developer.mozilla.org/en-US/docs/Web/CSS/:not
 Can I Use: https://caniuse.com/
 
+# Box shadow property
+It allows you to define drop shadow or inset shadow by adding inset as first keyword and then adding same parameters. The other values are positioning of shadow on x-axis, y-axis, blurinesh and the spread(spread beyond the border) and the shadow color.
+
+# color function
+rgb(r,g,b)
+rgb(r,g,b, alpha) -- alpha channel defines the transparency. value in 0 to 1.
+
+# cursor property
+value - pointer to make the hand shape when you hover over the button tag etc.
+
+# outline
+outline is not part of the box but is something which comes just after border and just before margin.
+It can be set by browser. So first inspect it the developer tool. and then remove by using pseudo class.
+
+# margn auto
+It will center the element horizontally. It will fill space left and right equally.
+
+# text-decoration
+to remove the underlining of text etc
+
+# float and clear
+float property float the elements left or right of the document flow. It will float around the text. So it will affect the adjacent elements.
+It looks like it is taking out the element out of the document flow.
+
+To fix this issue, we can use another element with poperty clear:both to clear the floating effect on both side of this element. This hack is useful when we wanto to avoid the text of the next element(and its position) get affected by its previous element.
+
+More on float: https://developer.mozilla.org/en-US/docs/Web/CSS/float
+
+# Position Property
+This property helps position the elements on the HTML page.
+By default, position = static, which keeps the element in the HTML document flow.
+
+Other values of position can be 
+1. Fixed 2. Absolute 3. Relative 4. sticky
+
+If position != static, then element can be taken out of document flow.
+Position of an element can be changed into 4 directions-
+1. top 2. right 3. left 4. bottom
+
+
+## position = fixed;
+With this, element is taken out of the HTML document flow. Element start behaving as the inline-box. Now it can be moved in all directions.
+
+There is another direction called z-index  which helps in moving the element in z direction i.e perpendicular to the screen. The + value will bring the element to the top and negative values will take the element down. The auto value or zero value will not change the position of element.
+
+top = 10px;
+left = 20px;
+right=20px;
+bottom=20px;
+Here position context is view port
+
+## position = absolute
+Position of elemnet to which this property applies depends upon two rules
+1. if none of the ancestors of parent elements have poistion property applied, then the position context of the element is the html 
+element.
+
+2. if some of ancestors have the position property applied, then closest ancestor which has position property applied is the position context of the element.
+## position = relative
+
+
+## position = sticky
+
+
+## stacking concept
+
+
+

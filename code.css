@@ -1,8 +1,6 @@
-
-
 #product-overview{
-  background:url("new-york.jpg");
-  color:white;
+  background:url("freedom_small.jpg");
+  color:#19b84c;
   font-family: 'Lato', sans-serif;
   height:528px;
   width:100%;
@@ -10,85 +8,140 @@
   
 }
 
-#plans{
+.plan-list{
+  padding:0 0 80px 0;
+}
+
+.plans-box-title{
+   color:rgb(80, 240, 80);
+   text-align:center;
+}
+
+.plans-box{
+  text-align:center;
+}
+
+.plan{
+  display: inline-block;
+  background:rgb(193, 250, 193);
+  text-align:center;
+  width:30%;
+  margin:16px 8px;
+  vertical-align: middle;
+  height:100%;
+  padding:24px 0px;
+}
+
+.plan ul{
+  padding:0;
+  margin:0;
+}
+
+.plan li{
+  list-style: none;
+  text-align: center;
+  margin:8px 0;
+}
+
+.plan_recommended{
+  background:#19b84c;
+  color:white;
+  box-shadow:2px 2px 2px 2px rgb(0,0,0,0.5);
+}
+
+.highlighted{
+  background:white;
+  color:rgba(21, 174, 21, 0.843) !important; 
+  margin:16px;
+  padding:8px;
+  border-radius:8px;
+  /*border-bottom:4px solid green;
+  border-right:2px solid green;*/
+  box-shadow:2px 2px 2px 2px black;
+  vertical-align:middle;
+}
+
+.plan_recommended-h1{
+  color:white !important;
+}
+
+.plan>h1{
+  color:#0e4f1f;
+}
+
+.plan>h2{
+  color:#858585;
+}
+
+.plan_recommended h2{
+  color:#0e4f1f;
+}
+
+.botton-class {
+  background:#0e4f1f;
+  display:inline-block;
+  color:white;
+  font:inherit;
+  border:#0e4f1f 1.5px solid;
+  padding:8px;
+  border-radius:8px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.botton-class:hover,
+.botton-class:active {
+  color:#0e4f1f;
+  background:white;
+}
+
+.botton-class:focus-visible{
+  outline: none;
+}
+
+.footer{
+  background:#fd8da0df;
+  padding: 16px 0 0 0;
+}
+
+.footer-title{
+   text-align:center;
+   color:white;
+   margin:0px;
+   padding:8px;
+}
+
+.footer-title+ul{
+  padding:0px;
+  margin:0px;
+  text-align:center;
+}
+
+.footer-feature {
+  color:white;
+  margin:0px 16px;
+  font-weight:bold;
   
 }
-.section-title{
-   color:rgb(80, 240, 80);
+
+.footer-circle{
+  padding:32px;
+  border:16px #f24562df;
+  background:#f24562df;
+  display:inline-block;
+  margin:4px;
+  border-radius:32px;
+  box-shadow:1px 1px 1px 1px black;
 }
+
+.footer-features{
+  list-style: none;
+  display:inline-block;
+  margin:16px 0px;
+}
+
+
 body{
   margin:0px;
 }
-
-.main-header{
-  background:rgb(11, 187, 11);
-  /*padding:8px 16px;
-  width:100%;*/
-  
-}
-
-.main-header > div{
-  display:inline-block;
-}
-
-.main-header__brand{
-  text-decoration: none;
-  font-family: 'Lato', sans-serif;
-  font-weight:bold;
-  vertical-align: middle;
-  color:darkolivegreen;
-  font-size:22px;
-}
-
-.main-nav{
-  text-align:right;
-  display:inline-block;
-  width:calc(100% - 236px);
-  vertical-align: middle;
-}
-
-.main-nav__items{
-  display:inline-block;
-  padding:0;
-  margin:0;
-  list-style:none;
-  vertical-align: middle;
-  text-decoration: none;
-}
-
-
-.main-nav__item{
-  display:inline-block;
-  text-align: right;
-  vertical-align: middle;
-  margin:0 16px;
-  font-weight:bold;
-  padding: 10px 0px;
-  
-}
-.main-nav__item a:hover,
-.main-nav__item a:active{
-  color:white;
-  border-bottom: solid 2px white;
-}
-
-.main-nav__items--link{
-  color:darkolivegreen;
-  text-decoration: none;
-}
-
-.main-nav__items--cta a{/*BEM naming specificatioon*/
-  color:white;
-  padding:8px 16px;
-  border-radius: 45% ;
-  background-color: red;
-}
-
-.main-nav__items--cta a:hover,
-.main-nav__items--cta a:active{
-   color:red;
-   background: white;
-   border:none;
-}
-
 
